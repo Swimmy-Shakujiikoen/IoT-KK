@@ -25,7 +25,7 @@ async def btn_click(event) -> None:
         return
 
     # IoT側が動作完了するまで10秒ごとに確認する
-    while not await ### IoT側が動作完了したか確認する ###:
+    while not await btn.is_done(): 
         await btn.sleep(10) 
 
     js.btn_success() 
